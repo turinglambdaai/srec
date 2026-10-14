@@ -17,7 +17,8 @@
 (define-runtime-path data-dir "data")
 
 (define (golden name)
-  (file->string (build-path data-dir name)))
+  ;; normalize line endings: git checkout may deliver CRLF on Windows
+  (string-replace (file->string (build-path data-dir name)) "\r\n" "\n"))
 
 ;; 53 sample bytes used across the bincopy-generated fixtures
 (define sample-53 (list->bytes (for/list ([i (in-range #x35)]) i)))
