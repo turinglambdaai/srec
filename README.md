@@ -1,5 +1,7 @@
 # srec — Motorola S-records in pure Racket
 
+**English** · [中文](README.zh-CN.md)
+
 [![CI](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `srec` reads and writes **Motorola S-record** files — the line-oriented
