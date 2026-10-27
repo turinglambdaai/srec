@@ -54,7 +54,7 @@ raco pkg install srec
 raco pkg install --auto --link "$(pwd)"
 raco test -p srec
 racket examples/quickstart.rkt
-raco setup -l srec --check-pkg-deps
+raco setup --check-pkg-deps -l srec
 ```
 
 CI 在 Linux、macOS、Windows 上执行相同检查。运行时为纯 Racket；
