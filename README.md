@@ -72,7 +72,7 @@ From the repository root, with Racket installed:
 raco pkg install --auto --link "$(pwd)"
 raco test -p srec
 racket examples/quickstart.rkt
-raco setup -l srec --check-pkg-deps
+raco setup --check-pkg-deps -l srec
 ```
 
 CI runs the same checks on Linux, macOS and Windows. The package is
