@@ -69,7 +69,7 @@ no real ECU or firmware is required.
 From the repository root, with Racket installed:
 
 ```sh
-raco pkg install --auto --link .
+raco pkg install --auto --link "$(pwd)"
 raco test -p srec
 racket examples/quickstart.rkt
 raco setup -l srec --check-pkg-deps
