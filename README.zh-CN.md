@@ -51,7 +51,7 @@ raco pkg install srec
 在已安装 Racket 的本地仓库根目录执行：
 
 ```sh
-raco pkg install --auto --link .
+raco pkg install --auto --link "$(pwd)"
 raco test -p srec
 racket examples/quickstart.rkt
 raco setup -l srec --check-pkg-deps
