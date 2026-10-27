@@ -18,6 +18,10 @@ jobs:
         with:
           version: 'stable'
       - name: Install package
-        run: raco pkg install --auto --link "$(pwd)"
+        run: raco pkg install --auto --link .
       - name: Run tests
         run: raco test -p srec
+      - name: Verify documented quickstart
+        run: racket examples/quickstart.rkt
+      - name: Build Scribble documentation and check package deps
+        run: raco setup -l srec --check-pkg-deps

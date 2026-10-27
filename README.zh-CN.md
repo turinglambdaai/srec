@@ -17,6 +17,7 @@ raco pkg install srec
 ## 用法
 
 ```racket
+#lang racket/base
 (require srec)
 
 (define image (bytes #xDE #xAD #xBE #xEF))
@@ -39,6 +40,27 @@ raco pkg install srec
 ### 镜像
 
 `srec->bytes` 将数据记录组装成一个字节串，空隙以填充字节填补（默认 `#xFF`），并拒绝地址重叠。`bytes->srec` 将一段镜像渲染为 S-record，地址宽度可配置（16/24/32 位 → S1/S2/S3）、每行数据字节数可配置、S0 头与起始记录均可选。
+
+## API 文档与开发
+
+[完整 Scribble 手册](srec/scribblings/srec.scrbl)说明记录类型、解析/
+序列化契约、地址宽度、校验和与错误语义。`scribble/example` 示例会在
+文档构建时执行。[可运行入门示例](examples/quickstart.rkt)使用合成数据
+检查上文的映像往返和入口地址，不需要真实 ECU 或固件文件。
+
+在已安装 Racket 的本地仓库根目录执行：
+
+```sh
+raco pkg install --auto --link .
+raco test -p srec
+racket examples/quickstart.rkt
+raco setup -l srec --check-pkg-deps
+```
+
+CI 在 Linux、macOS、Windows 上执行相同检查。运行时为纯 Racket；
+使用本库不依赖 Python。反馈可通过
+[GitHub Issues](https://github.com/turinglambdaai/srec/issues) 提交
+脱敏 S-record 样例和 Racket 版本，勿上传专有固件。
 
 ## 许可证
 
