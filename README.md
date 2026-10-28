@@ -25,6 +25,7 @@ raco pkg install srec
 ## Usage
 
 ```racket
+#lang racket/base
 (require srec)
 
 (define image (bytes #xDE #xAD #xBE #xEF))
@@ -55,6 +56,30 @@ gaps with a fill byte (default `#xFF`) and rejecting overlaps.
 `bytes->srec` renders an image with configurable address width
 (16/24/32 bit → S1/S2/S3), data bytes per line, optional S0 header and
 optional start record.
+
+## API reference and development
+
+[The Scribble manual](srec/scribblings/srec.scrbl) documents record kinds,
+parser/serializer contracts, address-width and checksum validation, and
+error conditions. Its examples use `scribble/example`, so a documentation
+build executes them. The [standalone quickstart](examples/quickstart.rkt)
+checks the above round trip with synthetic data, including the start address;
+no real ECU or firmware is required.
+
+From the repository root, with Racket installed:
+
+```sh
+raco pkg install --auto --link "$(pwd)"
+raco test -p srec
+racket examples/quickstart.rkt
+raco setup --check-pkg-deps -l srec
+```
+
+CI runs the same checks on Linux, macOS and Windows. The package is
+pure Racket at runtime; its golden test fixtures were generated separately
+and do not require Python to use the library. For bugs, post a small,
+non-proprietary S-record sample and the Racket version to
+[GitHub Issues](https://github.com/turinglambdaai/srec/issues).
 
 ## License
 
