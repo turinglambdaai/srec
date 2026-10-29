@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh-CN.md)
 
-[![CI](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/srec/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/srec/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `srec` reads and writes **Motorola S-record** files — the line-oriented
 firmware image format (also known as SRECORD, S19/S28/S37) burned into
@@ -79,7 +79,7 @@ CI runs the same checks on Linux, macOS and Windows. The package is
 pure Racket at runtime; its golden test fixtures were generated separately
 and do not require Python to use the library. For bugs, post a small,
 non-proprietary S-record sample and the Racket version to
-[GitHub Issues](https://github.com/turinglambdaai/srec/issues).
+[GitHub Issues](https://github.com/turlamai/srec/issues).
 
 ## License
 

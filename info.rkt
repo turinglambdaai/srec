@@ -8,7 +8,7 @@
 (define deps '("base" "rackunit-lib"))
 (define build-deps '("base" "scribble-lib" "racket-doc" "rackunit-lib"))
 (define pkg-desc "Pure-Racket Motorola S-record (SRECORD/S19/S28/S37) reader/writer: strict parser, checksum validation, image assembly and golden-anchor round trips")
-(define pkg-authors '("turinglambdaai"))
+(define pkg-authors '("turlamai"))
 (define license 'MIT)
 ;; Documentation is declared in srec/info.rkt (collection level) — `raco
 ;; setup` only discovers scribblings from a collection's own info.rkt for

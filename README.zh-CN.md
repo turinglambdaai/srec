@@ -2,7 +2,7 @@
 
 [English](README.md) · **中文**
 
-[![CI](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/srec/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/srec/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/srec/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `srec` 读写 **Motorola S-record** 文件——这是一种面向行的固件镜像格式（也称 SRECORD、S19/S28/S37），被烧录进各种微控制器，也常出现在各类 bug 报告的附件里。
 
@@ -59,7 +59,7 @@ raco setup --check-pkg-deps -l srec
 
 CI 在 Linux、macOS、Windows 上执行相同检查。运行时为纯 Racket；
 使用本库不依赖 Python。反馈可通过
-[GitHub Issues](https://github.com/turinglambdaai/srec/issues) 提交
+[GitHub Issues](https://github.com/turlamai/srec/issues) 提交
 脱敏 S-record 样例和 Racket 版本，勿上传专有固件。
 
 ## 许可证
